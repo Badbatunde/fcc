@@ -38,16 +38,45 @@ const myList = [
 
 // The same effect could be achieved by nesting an if statement inside another if:
 
-if (num > 5) {
-  if (num < 10) {
-    return "Yes";
-  }
-}
-return "No";
+// if (num > 5) {
+//   if (num < 10) {
+//     return "Yes";
+//   }
+// }
+// return "No";
 
 // will only return Yes if num is greater than 5 and less than 10. The same logic can be written as:
 
-if (num > 5 && num < 10) {
-  return "Yes";
+// if (num > 5 && num < 10) {
+//   return "Yes";
+// }
+// return "No";
+
+let count = 0;
+
+function cc(card) {
+  // Only change code below this line
+  function cardString(count) {
+    if (count >= 1) {
+      return " Bet"
+    } else if (count < 1) {
+      return " Hold"
+    } else {
+      return count
+    }
+  }
+
+  if (card == 2 || card == 3 || card == 4 || card == 5 || card == 6) {
+    console.log(`${++count}` + cardString(count));
+  } else if (card == 7 || card == 8 || card == 9) {
+    console.log(`${count}` + cardString(count));
+  } else if (card == 10 || card == 'J' || card == 'Q' || card == 'K' || card == 'A') {
+    console.log(`${--count}` + cardString(count))
+  }
+
+  // Only change code above this line
 }
-return "No";
+
+cc(2); cc('J'); cc(9); cc(2); cc(7);
+console.log(' ')
+// cc(2); cc(2); cc(10);
