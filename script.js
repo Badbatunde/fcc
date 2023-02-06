@@ -55,7 +55,7 @@ const myList = [
 let count = 0;
 
 function cc(card) {
-  // Only change code below this line
+  // Determining the string
   function cardString(count) {
     if (count >= 1) {
       return " Bet"
@@ -65,7 +65,7 @@ function cc(card) {
       return count
     }
   }
-
+  // Determining the count
   if (card == 2 || card == 3 || card == 4 || card == 5 || card == 6) {
     console.log(`${++count}` + cardString(count));
   } else if (card == 7 || card == 8 || card == 9) {
@@ -73,10 +73,8 @@ function cc(card) {
   } else if (card == 10 || card == 'J' || card == 'Q' || card == 'K' || card == 'A') {
     console.log(`${--count}` + cardString(count))
   }
-
   // Only change code above this line
 }
 
 cc(2); cc('J'); cc(9); cc(2); cc(7);
-console.log(' ')
 // cc(2); cc(2); cc(10);
