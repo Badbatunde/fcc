@@ -78,3 +78,13 @@ function cc(card) {
 
 cc(2); cc('J'); cc(9); cc(2); cc(7);
 // cc(2); cc(2); cc(10);
+
+const ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"],
+  "bark": "bow-wow"
+};
+
+delete ourDog.bark;
