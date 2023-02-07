@@ -116,12 +116,11 @@ console.log(recordCollection[2468].tracks)
 
 // Only change code below this line
 function updateRecords(records, id, prop, value) {
-  if (prop != records[id].tracks && value != "") {
-    records[id].prop = value;
+  if (prop !== 'tracks' && value !== "") {
+    records[id][prop] = value;
+  } else if (prop === 'tracks' && records[id].hasOwnProperty('tracks') === false) {
+    records[id][prop] = [value];
     console.log(value)
-  } else if (prop = records[id].tracks && records[id].tracks == undefined) {
-    [] = value;
-    console.log([])
   } else if (prop = records[id].tracks & value != "") {
     records[id].tracks.push(value);
   } else if (value == '') {
@@ -131,3 +130,15 @@ function updateRecords(records, id, prop, value) {
 }
 
 console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));  
+
+const myArray = [];
+
+// Only change code below this line
+let i = 5;
+
+while (i >= 0) {
+  myArray.push(i)
+  i--;
+}
+
+console.log(myArray)
