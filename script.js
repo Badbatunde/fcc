@@ -88,3 +88,46 @@ const ourDog = {
 };
 
 delete ourDog.bark;
+
+// Record Collection Setup
+const recordCollection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold'
+  }
+};
+
+// recordCollection[2468].tracks.push('Wizzy')
+console.log(recordCollection[2468].tracks)
+// console.log(recordCollection[5349].albumTitle)
+
+// Only change code below this line
+function updateRecords(records, id, prop, value) {
+  if (prop != records[id].tracks && value != "") {
+    records[id].prop = value;
+    console.log(value)
+  } else if (prop = records[id].tracks && records[id].tracks == undefined) {
+    [] = value;
+    console.log([])
+  } else if (prop = records[id].tracks & value != "") {
+    records[id].tracks.push(value);
+  } else if (value == '') {
+    delete records[id].prop
+  }
+  return records;
+}
+
+console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));  
