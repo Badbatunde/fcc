@@ -26,12 +26,12 @@
 // There should be at least 5 sub-arrays in the list.
 
 const myList = [
-    ['Bread', 20],
-    ['Monster Drink', 25],
-    ['Choc bar', 15],
-    ['Jacket', 5],
-    ['Trousers', 50]
-  ];
+  ["Bread", 20],
+  ["Monster Drink", 25],
+  ["Choc bar", 15],
+  ["Jacket", 5],
+  ["Trousers", 50],
+];
 
 // Comparisons with the Logical And Operator
 // Sometimes you will need to test more than one thing at a time. The logical and operator (&&) returns true if and only if the operands to the left and right of it are true.
@@ -58,11 +58,11 @@ function cc(card) {
   // Determining the string
   function cardString(count) {
     if (count >= 1) {
-      return " Bet"
+      return " Bet";
     } else if (count < 1) {
-      return " Hold"
+      return " Hold";
     } else {
-      return count
+      return count;
     }
   }
   // Determining the count
@@ -70,21 +70,31 @@ function cc(card) {
     console.log(`${++count}` + cardString(count));
   } else if (card == 7 || card == 8 || card == 9) {
     console.log(`${count}` + cardString(count));
-  } else if (card == 10 || card == 'J' || card == 'Q' || card == 'K' || card == 'A') {
-    console.log(`${--count}` + cardString(count))
+  } else if (
+    card == 10 ||
+    card == "J" ||
+    card == "Q" ||
+    card == "K" ||
+    card == "A"
+  ) {
+    console.log(`${--count}` + cardString(count));
   }
   // Only change code above this line
 }
 
-cc(2); cc('J'); cc(9); cc(2); cc(7);
+cc(2);
+cc("J");
+cc(9);
+cc(2);
+cc(7);
 // cc(2); cc(2); cc(10);
 
 const ourDog = {
-  "name": "Camper",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["everything!"],
-  "bark": "bow-wow"
+  name: "Camper",
+  legs: 4,
+  tails: 1,
+  friends: ["everything!"],
+  bark: "bow-wow",
 };
 
 delete ourDog.bark;
@@ -92,44 +102,47 @@ delete ourDog.bark;
 // Record Collection Setup
 const recordCollection = {
   2548: {
-    albumTitle: 'Slippery When Wet',
-    artist: 'Bon Jovi',
-    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+    albumTitle: "Slippery When Wet",
+    artist: "Bon Jovi",
+    tracks: ["Let It Rock", "You Give Love a Bad Name"],
   },
   2468: {
-    albumTitle: '1999',
-    artist: 'Prince',
-    tracks: ['1999', 'Little Red Corvette']
+    albumTitle: "1999",
+    artist: "Prince",
+    tracks: ["1999", "Little Red Corvette"],
   },
   1245: {
-    artist: 'Robert Palmer',
-    tracks: []
+    artist: "Robert Palmer",
+    tracks: [],
   },
   5439: {
-    albumTitle: 'ABBA Gold'
-  }
+    albumTitle: "ABBA Gold",
+  },
 };
 
 // recordCollection[2468].tracks.push('Wizzy')
-console.log(recordCollection[2468].tracks)
+console.log(recordCollection[2468].tracks);
 // console.log(recordCollection[5349].albumTitle)
 
 // Only change code below this line
 function updateRecords(records, id, prop, value) {
-  if (prop !== 'tracks' && value !== "") {
+  if (prop !== "tracks" && value !== "") {
     records[id][prop] = value;
-  } else if (prop === 'tracks' && records[id].hasOwnProperty('tracks') === false) {
+  } else if (
+    prop === "tracks" &&
+    records[id].hasOwnProperty("tracks") === false
+  ) {
     records[id][prop] = [value];
-    console.log(value)
-  } else if (prop = records[id].tracks & value != "") {
+    console.log(value);
+  } else if ((prop = records[id].tracks & (value != ""))) {
     records[id].tracks.push(value);
-  } else if (value == '') {
-    delete records[id].prop
+  } else if (value == "") {
+    delete records[id].prop;
   }
   return records;
 }
 
-console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));  
+console.log(updateRecords(recordCollection, 5439, "artist", "ABBA"));
 
 const myArray = [];
 
@@ -137,17 +150,17 @@ const myArray = [];
 let i = 5;
 
 while (i >= 0) {
-  myArray.push(i)
+  myArray.push(i);
   i--;
 }
 
-console.log(myArray)
+console.log(myArray);
 
 function multiplyAll(arr) {
   let product = 1;
   // Only change code below this line
   for (let i = 0; i < arr.length; i++) {
-    for(let j = 0; j < arr[i].length; j++) {
+    for (let j = 0; j < arr[i].length; j++) {
       product *= arr[i][j];
     }
   }
@@ -155,4 +168,56 @@ function multiplyAll(arr) {
   return product;
 }
 
-console.log(multiplyAll([[1, 2], [3, 4], [5, 6, 7]]))
+console.log(
+  multiplyAll([
+    [1, 2],
+    [3, 4],
+    [5, 6, 7],
+  ])
+);
+
+// Setup
+const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+
+function lookUpProfile(name, prop) {
+  for (let i = 0; i < contacts.length; i++) {
+    if (contacts[i].firstName === name) {
+      if (contacts[i].hasOwnProperty(prop)) {
+      return contacts[i][prop];
+    } else {
+      return "No such property";
+    }
+  }
+}
+return 'No such contact'
+}
+
+console.log(lookUpProfile("Akira", "likes"));
+console.log(lookUpProfile("Kristian", "lastName"));
+console.log(lookUpProfile("Sherlock", "likes"));
+console.log(lookUpProfile("Harry", "likes"));
