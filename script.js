@@ -224,3 +224,14 @@ console.log(lookUpProfile("Harry", "likes"));
 console.log(lookUpProfile("Bob", "number"))
 console.log(lookUpProfile("Bob", "potato"))
 console.log(lookUpProfile("Akira", "address"))
+
+function checkSign(num) {
+  return (Math.sign(num) === 1) ? 'positive' 
+  : (Math.sign(num) === -1) ? 'negative'
+  : 'zero'
+}
+
+console.log(checkSign(10))
+console.log(checkSign(-2))
+console.log(checkSign(2))
+console.log(checkSign(0))
