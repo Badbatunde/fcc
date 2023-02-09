@@ -208,33 +208,35 @@ function lookUpProfile(name, prop) {
   for (let i = 0; i < contacts.length; i++) {
     if (contacts[i].firstName === name) {
       if (contacts[i].hasOwnProperty(prop)) {
-      return contacts[i][prop];
-    } else {
-      return "No such property";
+        return contacts[i][prop];
+      } else {
+        return "No such property";
+      }
     }
   }
-}
-return 'No such contact'
+  return "No such contact";
 }
 
 console.log(lookUpProfile("Akira", "likes"));
 console.log(lookUpProfile("Kristian", "lastName"));
 console.log(lookUpProfile("Sherlock", "likes"));
 console.log(lookUpProfile("Harry", "likes"));
-console.log(lookUpProfile("Bob", "number"))
-console.log(lookUpProfile("Bob", "potato"))
-console.log(lookUpProfile("Akira", "address"))
+console.log(lookUpProfile("Bob", "number"));
+console.log(lookUpProfile("Bob", "potato"));
+console.log(lookUpProfile("Akira", "address"));
 
 function checkSign(num) {
-  return (Math.sign(num) === 1) ? 'positive' 
-  : (Math.sign(num) === -1) ? 'negative'
-  : 'zero'
+  return Math.sign(num) === 1
+    ? "positive"
+    : Math.sign(num) === -1
+    ? "negative"
+    : "zero";
 }
 
-console.log(checkSign(10))
-console.log(checkSign(-2))
-console.log(checkSign(2))
-console.log(checkSign(0))
+console.log(checkSign(10));
+console.log(checkSign(-2));
+console.log(checkSign(2));
+console.log(checkSign(0));
 
 // Countdown function
 function countdown(n) {
@@ -242,11 +244,11 @@ function countdown(n) {
     return [];
   } else {
     const countArray = countdown(n - 1);
-    countArray.push(n);
+    countArray.unshift(n);
     return countArray;
   }
 }
 
-console.log(countdown(-1))
-console.log(countdown(10))
-console.log(countdown(5))
+console.log(countdown(-1));
+console.log(countdown(10));
+console.log(countdown(5));
