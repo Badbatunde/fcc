@@ -252,3 +252,17 @@ function countdown(n) {
 console.log(countdown(-1));
 console.log(countdown(10));
 console.log(countdown(5));
+
+function rangeOfNumbers(startNum, endNum) {
+  if (startNum > endNum) {
+    return [];
+  } else {
+    const getRange = rangeOfNumbers(startNum)
+    getRange.push(endNum);
+    return getRange;
+  }
+};
+
+console.log(rangeOfNumbers(1, 9));
+console.log(rangeOfNumbers(2, 6));
+console.log(rangeOfNumbers(4, 0));
