@@ -254,15 +254,15 @@ console.log(countdown(10));
 console.log(countdown(5));
 
 function rangeOfNumbers(startNum, endNum) {
-  if (startNum > endNum) {
+  if (endNum < startNum) {
     return [];
   } else {
-    const getRange = rangeOfNumbers(startNum)
-    getRange.push(endNum);
-    return getRange;
+    const getArray = rangeOfNumbers(startNum, endNum - 1)
+    getArray.push(endNum)
+    return getArray
   }
 };
 
-console.log(rangeOfNumbers(1, 9));
-console.log(rangeOfNumbers(2, 6));
-console.log(rangeOfNumbers(4, 0));
+console.log(rangeOfNumbers(2, 9));
+
+ 
