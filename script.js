@@ -296,8 +296,14 @@ const LOCAL_FORECAST = {
   today: { low: 64, high: 77 },
   tomorrow: { low: 68, high: 80 }
 };
-
-// Only change code below this line
   
 const lowToday = LOCAL_FORECAST.today.low;
 const highToday = LOCAL_FORECAST.today.high;
+
+function removeFirstTwo(list) {
+  const [a, b, ...shorterList] = list;
+  return shorterList;
+}
+
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const sourceWithoutFirstTwo = removeFirstTwo(source);
