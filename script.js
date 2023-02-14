@@ -307,3 +307,21 @@ function removeFirstTwo(list) {
 
 const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const sourceWithoutFirstTwo = removeFirstTwo(source);
+
+const result = {
+  success: ["max-length", "no-amd", "prefer-arrow-functions"],
+  failure: ["no-var", "var-on-top", "linebreak"],
+  skipped: ["no-extra-semi", "no-dup-keys"]
+};
+function makeList(arr) {
+  const failureItems = []; 
+  for (let i = 0; i < arr.length; i++) {
+    let failures = arr[i]
+    failureItems.push(`<li class="text-warning">${failures}</li>`)
+  } 
+
+  return failureItems;
+}
+
+const failuresList = makeList(result.failure);
+console.log(failuresList)
