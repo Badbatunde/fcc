@@ -364,3 +364,9 @@ const makeServerRequest = new Promise((resolve, reject) => {
 makeServerRequest.then(result => {
   console.log(result)
 });
+
+// Match All Numbers
+let movieName = "2001: A Space Odyssey";
+let numRegex = /\d/; // Change this line
+let resultM = movieName.match(numRegex).length;
+console.log(resultM)
