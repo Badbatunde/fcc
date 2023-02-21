@@ -1,5 +1,5 @@
 // console.log("1" + 1)
-
+console.log(6 == '6')
 // You can easily increment or add one to a variable with the ++ operator.
 
 // i++;
@@ -337,16 +337,16 @@ const carrot = new Vegetable('carrot');
 console.log(carrot.name); 
 
 // Use * to Import Everything from a File
-import * as stringFunctions from './string_functions.js'
+// import * as stringFunctions from './string_functions.js'
 // Only change code above this line
 
 stringFunctions.uppercaseString("hello");
 stringFunctions.lowercaseString("WORLD!");
 
 // Created an Export Fallback with export default
-export default function subtract(x, y) {
-  return x - y;
-}
+// export default function subtract(x, y) {
+//   return x - y;
+// }
 
 // Handling a Fulfilled Promise with then
 const makeServerRequest = new Promise((resolve, reject) => {
@@ -370,3 +370,10 @@ let movieName = "2001: A Space Odyssey";
 let numRegex = /\d/; // Change this line
 let resultM = movieName.match(numRegex).length;
 console.log(resultM)
+
+// Access an Array's Contents Using Bracket Notation
+let miArray = ["a", "b", "c", "d"];
+// Only change code below this line
+myArray[1] = '1'
+// Only change code above this line
+console.log(miArray);
