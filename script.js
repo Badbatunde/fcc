@@ -1,5 +1,11 @@
 // console.log("1" + 1)
 console.log(6 == '6')
+
+let arr = [];
+arr.push(2)
+arr.push(3)
+arr.unshift(1)
+console.log(arr)
 // You can easily increment or add one to a variable with the ++ operator.
 
 // i++;
