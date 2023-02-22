@@ -383,3 +383,26 @@ let miArray = ["a", "b", "c", "d"];
 myArray[1] = '1'
 // Only change code above this line
 console.log(miArray);
+
+function findLongestWordLength(str) {
+  let currentStr = 0;
+  let longestStr = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === " ") {
+      if (currentStr > longestStr) {
+        longestStr = currentStr;
+      }
+      currentStr = 0;
+    } else {
+      currentStr++
+    }
+  }
+    if (currentStr > longestStr) {
+      longestStr = currentStr
+    }
+
+  return longestStr;
+}
+
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
