@@ -424,3 +424,19 @@ return results;
 }
 
 largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+function confirmEnding(str, target) {
+  let strLength = str.length
+  let targetLength = target.length
+
+  let diff = strLength - targetLength
+  let diffSlice = str.slice(diff)
+
+  if (diffSlice === target) {
+    return true
+  } else {
+    return false
+  }
+}
+
+confirmEnding("Bastian", "n");
