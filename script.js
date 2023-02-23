@@ -425,6 +425,7 @@ return results;
 
 largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
 
+// Confirm the Ending
 function confirmEnding(str, target) {
   let strLength = str.length
   let targetLength = target.length
@@ -440,3 +441,18 @@ function confirmEnding(str, target) {
 }
 
 confirmEnding("Bastian", "n");
+
+// Repeat a String Repeat a String
+function repeatStringNumTimes(str, num) {
+  let result = "";
+  for (let i = 0; i < num; i++){
+  if (num <= 0) {
+    return ""
+  } else {
+    result += str
+  }
+}
+return result
+}
+
+repeatStringNumTimes("abc", 3);
