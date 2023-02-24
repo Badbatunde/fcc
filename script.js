@@ -456,3 +456,11 @@ return result
 }
 
 repeatStringNumTimes("abc", 3);
+
+//Finders Keepers
+function findElement(arr, func) {
+  let num = 0;
+  return num;
+}
+
+findElement([1, 2, 3, 4], num => num % 2 === 0);
