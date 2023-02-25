@@ -452,7 +452,7 @@ function repeatStringNumTimes(str, num) {
     result += str
   }
 }
-return result
+// return result
 }
 
 repeatStringNumTimes("abc", 3);
@@ -460,7 +460,14 @@ repeatStringNumTimes("abc", 3);
 //Finders Keepers
 function findElement(arr, func) {
   let num = 0;
-  return num;
+
+  for (let i = 0; i < arr.length; i++) {
+    num = arr[i]
+    if(func(num)) {
+      return num
+    }
+  }
+  return undefined;
 }
 
 findElement([1, 2, 3, 4], num => num % 2 === 0);
