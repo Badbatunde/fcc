@@ -15,7 +15,8 @@ console.log(arr)
 
 // In order to get the last letter of a string, you can subtract one from the string's length.
 
-// For example, if const firstName = "Ada", you can get the value of the last letter of the string by using firstName[firstName.length - 1].
+// For example, if const firstName = "Ada", you can get the value of 
+// the last letter of the string by using firstName[firstName.length - 1].
 
 // Example:
 
@@ -23,10 +24,12 @@ console.log(arr)
 // const lastLetter = firstName[firstName.length - 1];
 // lastLetter would have a value of the string a.
 
-// Shopping List
-// Create a shopping list in the variable myList. The list should be a multi-dimensional array containing several sub-arrays.
+/* Shopping List
+Create a shopping list in the variable myList. The list should be a 
+multi-dimensional array containing several sub-arrays. */
 
-// The first element in each sub-array should contain a string with the name of the item. The second element should be a number representing the quantity i.e.
+/* The first element in each sub-array should contain a string with the name of the item. 
+The second element should be a number representing the quantity i.e. */
 
 // ["Chocolate Bar", 15]
 // There should be at least 5 sub-arrays in the list.
@@ -39,24 +42,25 @@ const myList = [
   ["Trousers", 50],
 ];
 
-// Comparisons with the Logical And Operator
-// Sometimes you will need to test more than one thing at a time. The logical and operator (&&) returns true if and only if the operands to the left and right of it are true.
+/* Comparisons with the Logical And Operator
+Sometimes you will need to test more than one thing at a time. 
+The logical and operator (&&) returns true if and only if the operands to the left and right of it are true. */
 
 // The same effect could be achieved by nesting an if statement inside another if:
 
-// if (num > 5) {
-//   if (num < 10) {
-//     return "Yes";
-//   }
-// }
-// return "No";
+/* if (num > 5) {
+  if (num < 10) {
+    return "Yes";
+  }
+}
+return "No"; */
 
 // will only return Yes if num is greater than 5 and less than 10. The same logic can be written as:
 
-// if (num > 5 && num < 10) {
-//   return "Yes";
-// }
-// return "No";
+/* if (num > 5 && num < 10) {
+  return "Yes";
+}
+return "No"; */
 
 let count = 0;
 
@@ -85,7 +89,6 @@ function cc(card) {
   ) {
     console.log(`${--count}` + cardString(count));
   }
-  // Only change code above this line
 }
 
 cc(2);
@@ -126,11 +129,8 @@ const recordCollection = {
   },
 };
 
-// recordCollection[2468].tracks.push('Wizzy')
 console.log(recordCollection[2468].tracks);
-// console.log(recordCollection[5349].albumTitle)
 
-// Only change code below this line
 function updateRecords(records, id, prop, value) {
   if (prop !== "tracks" && value !== "") {
     records[id][prop] = value;
@@ -139,8 +139,7 @@ function updateRecords(records, id, prop, value) {
     records[id].hasOwnProperty("tracks") === false
   ) {
     records[id][prop] = [value];
-    console.log(value);
-  } else if ((prop = records[id].tracks & (value != ""))) {
+  } else if (prop = records[id].tracks && (value != "")) {
     records[id].tracks.push(value);
   } else if (value == "") {
     delete records[id].prop;
@@ -152,7 +151,6 @@ console.log(updateRecords(recordCollection, 5439, "artist", "ABBA"));
 
 const myArray = [];
 
-// Only change code below this line
 let i = 5;
 
 while (i >= 0) {
@@ -164,13 +162,11 @@ console.log(myArray);
 
 function multiplyAll(arr) {
   let product = 1;
-  // Only change code below this line
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr[i].length; j++) {
       product *= arr[i][j];
     }
   }
-  // Only change code above this line
   return product;
 }
 
