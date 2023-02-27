@@ -487,3 +487,11 @@ let beagle = new Dog("Snoopy");
 
 let ownProps = [];
 let prototypeProps = [];
+
+for (property in beagle) {
+  if(beagle.hasOwnProperty(property)) {
+    ownProps.push(property)
+  } else {
+    prototypeProps.push(property)
+  }
+}
