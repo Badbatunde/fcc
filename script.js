@@ -467,3 +467,11 @@ function findElement(arr, func) {
 }
 
 findElement([1, 2, 3, 4], num => num % 2 === 0);
+
+let dog = {
+  name: "Spot",
+  numLegs: 4,
+
+};
+
+dog.sayLegs();
