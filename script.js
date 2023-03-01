@@ -511,12 +511,9 @@ Dog.prototype = {
   }
 };
 
-// The global variable
+// Pass Arguments to Avoid External Dependence in a Function
 let fixedValue = 4;
 
-// Only change code below this line
-function incrementer() {
-
-
-  // Only change code above this line
+function incrementer(increase) {
+  return increase = fixedValue + 1;
 }
