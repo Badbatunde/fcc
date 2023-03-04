@@ -527,3 +527,12 @@ const squareList = arr => {
 
 const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
 console.log(squaredIntegers);
+
+//Applying Functional Programming to Convert Strings to URL Slugs
+function urlSlug(title) {
+  let titleCase = title.toLowerCase().trim();
+  let removeSpace = titleCase.split(/\s+/)
+  return(removeSpace.join("-"))
+
+}
+urlSlug(" A Mind Needs Books Like A Sword Needs A Whetstone");
