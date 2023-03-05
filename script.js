@@ -548,3 +548,47 @@ function spinalCase(str) {
   }
 
 spinalCase('This Is Spinal Tap');
+
+// Pig Latin
+function translatePigLatin(str) {
+  var pigLatin = "";
+  var regex = /[aeiou]/gi;
+
+  // Check if the first character is a vowel
+  if (str[0].match(regex)) {
+    pigLatin = str + "way";
+  } else if (str.match(regex) === null) {
+    // Check if the string contains only consonants
+    pigLatin = str + "ay";
+  } else {
+    // Find how many consonants before the first vowel.
+    var vowelIndice = str.indexOf(str.match(regex)[0]);
+
+    // Take the string from the first vowel to the last char
+    // then add the consonants that were previously omitted and add the ending.
+    pigLatin = str.substr(vowelIndice) + str.substr(0, vowelIndice) + "ay";
+  }
+
+  return pigLatin;
+}
+
+translatePigLatin("consonant");
+
+// Search and Replace
+function myReplace(str, before, after) {
+  var index = str.indexOf(before);
+// Check to see if the first letter is uppercase or not
+if (str[index] === str[index].toUpperCase()) {
+  // Change the after word to be capitalized before we use it.
+  after = after.charAt(0).toUpperCase() + after.slice(1);
+} else {
+  // Change the after word to be uncapitalized before we use it.
+  after = after.charAt(0).toLowerCase() + after.slice(1);
+}
+// Now replace the original str with the edited one.
+str = str.replace(before, after);
+
+return str;
+}
+
+myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
