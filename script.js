@@ -619,3 +619,24 @@ function pairElement(str) {
 }
 
 pairElement("GCG");                           
+
+// Palindrome checker
+function palindrome(str) {
+  let getLowerCase = str.toLowerCase()
+  
+  // replace non-alphanumeric characters with an empty string
+  let replaceStr = getLowerCase.replace(/[^A-Za-z0-9]/g, "")
+  
+  let splitStr = replaceStr.split("")
+  let reverseStr = splitStr.reverse()
+  let joinStr = reverseStr.join("")
+  
+  // checks if string is a palindrome
+  if(joinStr === replaceStr) {
+    return true
+  } else {
+    return false
+  }
+}
+
+palindrome("_eye"); // returns true
