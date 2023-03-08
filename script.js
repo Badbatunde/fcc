@@ -8,6 +8,13 @@ arr.unshift(1)
 console.log(arr)
 // You can easily increment or add one to a variable with the ++ operator.
 
+function getLowerCase(str) {
+  return str.toLowerCase()
+}
+
+getLowerCase('wHAt kiND of CASe iS tHIS?')
+// returns 'what kind of case is this?'
+
 // i++;
 // is the equivalent of
 
@@ -640,3 +647,21 @@ function palindrome(str) {
 }
 
 palindrome("_eye"); // returns true
+
+function convertToRoman(num) {
+  let result = ""
+  let sNum = num.toString().split("")
+
+  let numToRoman = {1: "I", 2: "II", 3: "III",  4 : "IV", 5: "V", 6: "VI", 7 : "VII", 8 : "VIII", 9 : "IX", 10 : "X", 20 : "XX", 30 : "XXX", 40 : "XL", 50 : "L", 60 : "LX", 70 : "LXX", 80 : "LXXX", 90 : "XC", 100 : "C", 200 : "CC", 300 : "CCC", 400 : "CD", 500 : "D", 600 : "DC", 700 : "DCC", 800 : "DCCC", 900 : "CM", 1000: "M", 2000: "MM", 3000: "MMM"};
+
+  for(let i = 0; i < sNum.length; i++) {
+    var findKey = sNum[i]*Math.pow(10,sNum.length-i-1); 
+    //find the key of the current index value multiplied by power of 10^i  
+    if(numToRoman[findKey]){
+      result +=  numToRoman[findKey];
+    }      
+  } 
+  return result
+}
+
+convertToRoman(36);
