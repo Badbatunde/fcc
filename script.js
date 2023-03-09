@@ -667,7 +667,101 @@ function convertToRoman(num) {
 convertToRoman(36);
 
 function rot13(str) {
-  return str;
+  let newArr = str
+    .toUpperCase()
+    .split("")
+
+   let anotherArr = []
+
+  for (let i = 0; i < str.length; i++) {
+    let alpha = newArr[i]
+
+    switch(alpha) {
+    case "A":
+    alpha = "N"
+    break;
+    case "B":
+    alpha = "O"
+    break;
+    case "C":
+    alpha = "P"
+    break
+    case "D":
+    alpha = "Q"
+    break
+    case "E":
+    alpha = "R"
+    break
+    case "F":
+    alpha = "S"
+    break
+    case "G":
+    alpha = "T"
+    break
+    case "H":
+    alpha = "U"
+    break
+    case "I":
+    alpha = "V"
+    break
+    case "J":
+    alpha = "W"
+    break
+    case "K":
+    alpha = "X"
+    break
+    case "L":
+    alpha = "Y"
+    break
+    case "M":
+    alpha = "Z"
+    break
+    case "N":
+    alpha = "A"
+    break;
+    case "O":
+    alpha = "B"
+    break;
+    case "P":
+    alpha = "C"
+    break
+    case "Q":
+    alpha = "D"
+    break
+    case "R":
+    alpha = "E"
+    break
+    case "S":
+    alpha = "F"
+    break
+    case "T":
+    alpha = "G"
+    break
+    case "U":
+    alpha = "H"
+    break
+    case "V":
+    alpha = "I"
+    break
+    case "W":
+    alpha = "J"
+    break
+    case "X":
+    alpha = "K"
+    break
+    case "Y":
+    alpha = "L"
+    break
+    case "Z":
+    alpha = "M"
+    break
+    default:
+    }
+
+    anotherArr.push(alpha)
+    
+  }
+  return anotherArr.join("")
 }
 
-rot13("SERR PBQR PNZC");
+console.log(rot13("SERR PBQR PNZC"));
