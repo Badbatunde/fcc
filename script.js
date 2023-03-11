@@ -8,6 +8,15 @@ arr.unshift(1)
 console.log(arr)
 // You can easily increment or add one to a variable with the ++ operator.
 
+let number = 7.6834;
+let num = number.toFixed(1);
+
+console.log(num)
+
+let arrr = ["I", "Love", "Tech", "Twitter", "💯"]
+const text = arrr.join(" ")
+console.log(text) // returns "I Love Tech Twitter 💯"
+
 function convertToStr(num) {
   let stringifyNum = num.toString()
   return stringifyNum
@@ -772,6 +781,8 @@ function rot13(str) {
 }
 
 console.log(rot13("SERR PBQR PNZC"));
+
+// Telephone Number Validator
 
 let re = /^([+]?1[\s]?)?((?:[(](?:[2-9]1[02-9]|[2-9][02-8][0-9])[)][\s]?)|(?:(?:[2-9]1[02-9]|[2-9][02-8][0-9])[\s.-]?)){1}([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2}[\s.-]?){1}([0-9]{4}){1}$/;
  
