@@ -1,6 +1,11 @@
 // console.log("1" + 1)
 console.log(6 == '6')
 
+const myStack = ["JavaScript", "Bootstrap", "Tailwind CSS"];
+myStack.pop();
+
+console.log(myStack) 
+
 let arr = [];
 arr.push(2)
 arr.push(3)
