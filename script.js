@@ -6,6 +6,11 @@ myStack.pop();
 
 console.log(myStack) 
 
+let texta = "Hello Tech Twitter";
+let length = texta.length;
+
+console.log(length)
+
 let arr = [];
 arr.push(2)
 arr.push(3)
